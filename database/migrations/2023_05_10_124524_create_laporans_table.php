@@ -14,7 +14,12 @@ class CreateLaporansTable extends Migration
     public function up()
     {
         Schema::create('laporans', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_laporan');
+            $table->string('image');
+            $table->string('location');
+            $table->text('description');
+            $table->string('laporan_diproses');
+            $table->string('laporan_selesai');
             $table->timestamps();
         });
     }
